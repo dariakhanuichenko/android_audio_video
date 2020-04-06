@@ -18,6 +18,7 @@ import android.widget.Toast;
 public class MainActivity extends AppCompatActivity {
 
     private Intent intentAudio; //для перехода на другое активити
+    private Intent intentVideo; //для перехода на другое активити
 
 
     @Override
@@ -33,5 +34,12 @@ public class MainActivity extends AppCompatActivity {
 
         startActivity(intentAudio);
 
+    }
+
+    public void videoPlay(View view) {
+        if(intentVideo == null)
+            intentVideo = new Intent(this, VideoActivity.class);
+
+        startActivity(intentVideo);
     }
 }
